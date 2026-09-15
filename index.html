@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="灵犀AI对话助手 - 基于阿里云百炼的智能对话助手">
+    <meta name="keywords" content="AI, 对话助手, 灵犀, 阿里云百炼">
+    <title>灵犀 - AI对话助手</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    <div class="container" id="app" role="main">
+        <!-- 欢迎区域 -->
+        <section class="welcome-section" id="welcomeSection" aria-labelledby="welcome-title">
+            <h1 class="welcome-title" id="welcome-title">嗨，<span class="gradient-text">我是灵犀</span></h1>
+            <p class="welcome-subtitle">我能帮你什么吗？</p>
+            <div class="suggestions" role="list" aria-label="快捷建议">
+                <div class="suggestion-card" data-text="我是一名前端开发初学者，如何提升相关技能？" role="listitem" tabindex="0">
+                    <p>我是一名前端开发初学者，如何提升相关技能？</p>
+                    <div class="suggestion-icon blue" aria-hidden="true"></div>
+                </div>
+                <div class="suggestion-card" data-text="有哪些平价又新颖的生日礼物适合送朋友。" role="listitem" tabindex="0">
+                    <p>有哪些平价又新颖的生日礼物适合送朋友。</p>
+                    <div class="suggestion-icon green" aria-hidden="true"></div>
+                </div>
+                <div class="suggestion-card" data-text="准备在家里办一个大型家庭聚会，帮我计划。" role="listitem" tabindex="0">
+                    <p>准备在家里办一个大型家庭聚会，帮我计划。</p>
+                    <div class="suggestion-icon yellow" aria-hidden="true"></div>
+                </div>
+                <div class="suggestion-card" data-text="带小朋友去野餐，有什么好玩的活动建议吗？" role="listitem" tabindex="0">
+                    <p>带小朋友去野餐，有什么好玩的活动建议吗？</p>
+                    <div class="suggestion-icon purple" aria-hidden="true"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 对话区域 -->
+        <section class="chat-section" id="chatSection" aria-live="polite" aria-atomic="false">
+            <div class="chat-messages" id="chatMessages" role="log" aria-label="对话记录"></div>
+        </section>
+
+        <!-- 输入区域 -->
+        <footer class="input-section">
+            <div class="input-wrapper">
+                <input type="text" class="input-field" id="inputField" placeholder="有问题尽管问我" aria-label="输入问题" autocomplete="off">
+                <div class="input-actions">
+                    <label class="upload-btn" for="fileInput" title="上传图片" aria-label="上传图片">
+                        <input type="file" id="fileInput" accept="image/*" aria-label="选择图片文件">
+                        <span class="upload-icon" aria-hidden="true">📎</span>
+                    </label>
+                    <button class="send-btn" id="sendBtn" disabled aria-label="发送消息">
+                        <span class="send-icon" aria-hidden="true">↑</span>
+                    </button>
+                    <button class="theme-btn" id="themeBtn" title="切换主题" aria-label="切换深色/浅色主题">
+                        <span class="theme-icon" aria-hidden="true">🌙</span>
+                    </button>
+                    <button class="clear-btn" id="clearBtn" title="清除对话" aria-label="清除所有对话">
+                        <span class="clear-icon" aria-hidden="true">🗑️</span>
+                    </button>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="js/index.js"></script>
+</body>
+</html>
